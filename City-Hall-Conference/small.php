@@ -1,4 +1,9 @@
 <?php
+// COM Port for Projector is
+// COM Port for Switcher is
+// GPIO for Screen UP is
+// GPIO for Screen DOWN is
+
 include "PhpSerial.php";
 	error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -10,15 +15,6 @@ if(isset($_POST['sys-on']))
 	system("gpio write 29 0");
 	system("gpio write 29 1");
 // set volume
-	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB0");
-	$serial->confBaudRate(115200);
-	$serial->confParity("none");
-	$serial->confCharacterLength(8);
-	$serial->confStopBits(1);
-	$serial->deviceOpen();
-	$serial->sendMessage("Y 0 131 0 \r");
-	$serial->deviceClose();
 //power projector on
 	$serial = new PhpSerial;
 	$serial->deviceSet("/dev/ttyUSB1");
@@ -27,10 +23,13 @@ if(isset($_POST['sys-on']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "FE0058035bFF";
-	$cmd = pack("H*",$cmd);	
+	$cmd = "PWR ON";
+	//$cmd = pack("H*",$cmd);
 	$serial->sendMessage($cmd);
-	$serial->deviceClose();	
+	$cmd = "SOURCE 30";
+	//$cmd = pack("H*",$cmd);
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
 }
 //System OFF Button
 
@@ -39,17 +38,8 @@ if(isset($_POST['sys-off']))
 {	system("gpio mode 28 out");
 	system("gpio write 28 0");
 	system("gpio write 28 1");
-//mute sound	
-	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB0");
-	$serial->confBaudRate(115200);
-	$serial->confParity("none");
-	$serial->confCharacterLength(8);
-	$serial->confStopBits(1);
-	$serial->deviceOpen();
-	$serial->sendMessage("Y 0 131 -100 \r");
-	$serial->deviceClose();
-//power off projector	
+//mute sound
+//power off projector
 	$serial = new PhpSerial;
 	$serial->deviceSet("/dev/ttyUSB1");
 	$serial->confBaudRate(9600);
@@ -57,10 +47,10 @@ if(isset($_POST['sys-off']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "FE00580058FF";
-	$cmd = pack("H*",$cmd);
+	$cmd = "PWR OFF";
+//	$cmd = pack("H*",$cmd);
 	$serial->sendMessage($cmd);
-	$serial->deviceClose();	
+	$serial->deviceClose();
 }
 
 //Volume MUTE Button
