@@ -59,7 +59,7 @@ if(isset($_POST['sys-off']))
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <title>EOC A/V Control</title>
 </head>
-<body>
+<body style="background-color:fede03;">
 <form method="post">
 <table style="width:100%;">
 	<tr>
