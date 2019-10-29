@@ -6,37 +6,36 @@
 <title>A/V Control</title>
 </head>
 <body style="background-image:url(tree.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;">
-	<div style="text-align: center; font-family: Arial">
+		<div style="text-align: center; font-family: Arial;font-size:28pt;foreground-color:#fff;">
 			City Hall Conference Room AV Control
 			</div>
-<table style="width:100%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;">
-			<tr>
+<table style="width:100%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;">
+<tr>
 		<td>
-		<form method="post">
-			<button name="sys-off"class="btn btn-danger" style="width:235; height:157; font-size: 22pt;">SYSTEM OFF</button>
-		</form>
+			<button name="vol-up"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume Down</button>
+			<br><br>
+			<button name="vol-dn"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume Up</button>
+			<br><br>
+			<button name="vol-dn"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume Mute</button>
 		</td>
 		<td>
 		</td>
 		<td>
-		<form method="post">
-			<button name="sys-on"class="btn btn-success" style="width:235; height:157; font-size: 22pt;" >SYSTEM ON</button>
-		</form>
+		<button name="sys-on"class="btn btn-success" style="width:235; height:157; font-size: 22pt;" >SYSTEM ON</button>
+		<br>
+		<br>
+		<button name="sys-off"class="btn btn-danger" style="width:235; height:157; font-size: 22pt;" >SYSTEM OFF</button>
 		</td>
 </tr>
 <tr>
-<td>
-	<button name="vol-up"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume DOWN</button>
-	<br><br>
-	<button name="vol-dn"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume UP</button>
-	</td>
 	<td>
-				<button name="source-rack-pc"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >IN-ROOM COMPUTER</button>
-				<br><br>
-				<button name="source-vga-1"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;" >COMPUTER INPUT</button>
-				<br><br>
-				<button name="source-hdmi-1"class="btn btn-primary" style="width:235; height: 102; font-size: 18pt; font-weight: 400;" >HDMI INPUT</button>
-</td>
+
+	</td>
+	<td style="text-align:center;">
+		<button name="source-rack-pc"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:0pt;padding-right:10pt;" >IN-ROOM COMPUTER</button>
+		<button name="source-vga-1"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:10pt;" >COMPUTER INPUT</button>
+		<button name="source-hdmi-1"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:0pt;" >HDMI<br>INPUT</button>
+	</td>
 </tr>
 </table>
 </body>

@@ -11,9 +11,9 @@ ini_set('display_errors', '1');
 if(isset($_POST['sys-on']))
 {
 // lower screen
-	system("gpio mode 29 out");
-	system("gpio write 29 0");
-	system("gpio write 29 1");
+	system("gpio mode 28 out");
+	system("gpio write 28 0");
+	system("gpio write 28 1");
 // set volume
 //power projector on
 	$serial = new PhpSerial;
