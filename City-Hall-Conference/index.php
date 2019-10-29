@@ -14,19 +14,19 @@
 <table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', sans-serif;">
 <tr>
 		<td>
-			<button name="vol-up"class="btn btn-primary" style="width:235; height: 125; font-size: 28pt; font-weight:400;" >Volume Down</button>
+			<button name="vol-up"class="btn btn-primary" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume Down</button>
 			<br><br>
-			<button name="vol-dn"class="btn btn-primary" style="width:235; height: 125; font-size: 28pt; font-weight:400;" >Volume Up</button>
+			<button name="vol-dn"class="btn btn-primary" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume<br>Up</button>
 			<br><br>
-			<button name="vol-dn"class="btn btn-dark" style="width:235; height: 125; font-size: 28pt; font-weight:400;" >Volume Mute</button>
+			<button name="vol-dn"class="btn btn-dark" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume Mute</button>
 		</td>
 		<td>
 		</td>
 		<td style="text-align: right;">
-		<button name="sys-on"class="btn btn-success" style="width:235; height:200; font-size: 28pt;" >SYSTEM ON</button>
+		<button name="sys-on"class="btn btn-success" style="width:235; height:200; font-size: 32pt;" >SYSTEM<br>ON</button>
 		<br>
 		<br>
-		<button name="sys-off"class="btn btn-danger" style="width:235; height:200; font-size: 28pt;" >SYSTEM OFF</button>
+		<button name="sys-off"class="btn btn-danger" style="width:235; height:200; font-size: 32pt;" >SYSTEM OFF</button>
 		</td>
 
 </tr>
