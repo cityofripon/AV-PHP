@@ -23,10 +23,9 @@ if(isset($_POST['sys-on']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "PWR ON";
-	//$cmd = pack("H*",$cmd);
+	$cmd = "PWR ON\r";
 	$serial->sendMessage($cmd);
-	$cmd = "SOURCE 30";
+	$cmd = "SOURCE 30\r";
 	//$cmd = pack("H*",$cmd);
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
@@ -35,9 +34,9 @@ if(isset($_POST['sys-on']))
 
 if(isset($_POST['sys-off']))
 // raise screen
-{	system("gpio mode 28 out");
-	system("gpio write 28 0");
-	system("gpio write 28 1");
+{	system("gpio mode 29 out");
+	system("gpio write 29 0");
+	system("gpio write 29 1");
 //mute sound
 //power off projector
 	$serial = new PhpSerial;
@@ -47,7 +46,7 @@ if(isset($_POST['sys-off']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "PWR OFF";
+	$cmd = "PWR OFF\r";
 //	$cmd = pack("H*",$cmd);
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
