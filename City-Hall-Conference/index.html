@@ -1,0 +1,39 @@
+<?php include_once("av-control.php") ?>
+<html>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>EOC A/V Control</title>
+</head>
+<body style="background-color:fff;">
+<table style="width:100%;">
+	<tr>
+		<td>
+		<form method="post">
+			<button name="sys-off"class="btn btn-danger" style="width:235; height:157; font-size: 22pt;">SYSTEM OFF</button>
+		</form>
+		</td>
+		<td>
+		</td>
+		<td>
+		<form method="post">
+			<button name="sys-on"class="btn btn-success" style="width:235; height:157; font-size: 22pt;" >SYSTEM ON</button>
+		</form>
+		</td>
+</tr>
+<tr>
+<td>
+	<button name="vol-up"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume DOWN</button>
+	<br><br>
+	<button name="vol-dn"class="btn btn-info" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >Volume UP</button>
+	</td>
+	<td>
+				<button name="source-rack-pc"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >IN-ROOM COMPUTER</button>
+				<br><br>
+				<button name="source-vga-1"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;" >COMPUTER INPUT</button>
+				<br><br>
+				<button name="source-hdmi-1"class="btn btn-primary" style="width:235; height: 102; font-size: 18pt; font-weight: 400;" >HDMI INPUT</button>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -54,38 +54,3 @@ if(isset($_POST['sys-off']))
 }
 
 ?>
-<html>
-<head>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<title>EOC A/V Control</title>
-</head>
-<body style="background-color:fede03;">
-<form method="post">
-<table style="width:100%;">
-	<tr>
-		<td>
-			<p style="margin-bottom: 5px;">
-			<button name="sys-on"class="btn btn-success" style="width:235; height:157; font-size: 22pt;" >SYSTEM ON</button>
-			</p>
-			<p>
-			<button name="sys-off"class="btn btn-danger" style="width:235; height:157; font-size: 22pt;">SYSTEM OFF</button>
-			</p>
-			</form>
-		</td>
-		<td>
-			<p  style="margin-bottom:5px;">
-			<button name="source-rack-pc"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight:400;" >IN-ROOM COMPUTER</button>
-			</p>
-			<p style="margin-bottom: 5px;">
-			<button name="source-vga-1"class="btn btn-primary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;" >COMPUTER INPUT</button>
-						</p>
-			<p>
-			<button name="source-hdmi-1"class="btn btn-primary" style="width:235; height: 102; font-size: 18pt; font-weight: 400;" >HDMI INPUT</button>
-			</p>
-		</td>
-	</tr>
-	<tr>
-	</tr>
-</table>
-</body>
-</html>
