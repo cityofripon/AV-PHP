@@ -17,7 +17,7 @@ if(isset($_POST['sys-on']))
 // set volume
 //power projector on
 	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->deviceSet("/dev/ttyUSB0");
 	$serial->confBaudRate(9600);
 	$serial->confParity("none");
 	$serial->confCharacterLength(8);
@@ -41,7 +41,7 @@ if(isset($_POST['sys-off']))
 //mute sound
 //power off projector
 	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->deviceSet("/dev/ttyUSB0");
 	$serial->confBaudRate(9600);
 	$serial->confParity("none");
 	$serial->confCharacterLength(8);
@@ -53,109 +53,6 @@ if(isset($_POST['sys-off']))
 	$serial->deviceClose();
 }
 
-//Volume MUTE Button
-if(isset($_POST['vol-mute']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 131 -100 \r");
-$serial->deviceClose();
-//echo "Volume set to -100 \n\r";
-}
-
-//Volume MAX Button
-if(isset($_POST['vol-up']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 131 -5 \r");
-$serial->deviceClose();
-
-//echo "Volume set to 24 \n\r";
-}
-//Source Rack PC Button
-if(isset($_POST['source-rack-pc']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 30 6 \r");
-$serial->deviceClose();
-}
-//Source HDMI 1 Button
-if(isset($_POST['source-hdmi-1']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 30 2 \r");
-$serial->deviceClose();
-}
-//Source VGA 1 Button
-if(isset($_POST['source-hdmi-1']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 30 0 \r");
-$serial->deviceClose();
-}
-//VolumeUP
-if(isset($_POST['source-hdmi-1']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 4 \r");
-$serial->deviceClose();
-}
-//VolumeUP
-if(isset($_POST['source-hdmi-1']))
-{
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB0");
-$serial->confBaudRate(115200);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$serial->sendMessage("Y 0 3 \r");
-$serial->deviceClose();
-}
-if(isset($_POST['reset-switcher']))
-{
-// switcher power cycle
-	system("gpio mode 27 out");
-	system("gpio write 27 0");
-	usleep(500000);
-	system("gpio write 27 1");
-}
 ?>
 <html>
 <head>
