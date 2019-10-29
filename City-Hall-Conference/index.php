@@ -39,9 +39,9 @@
 	<td>
 	</td>
 	<td style="text-align:center;">
-		<button name="table-vga" style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:0pt;padding-right:10pt; background: transparent;" ><img src="table-vga.png" width="235" height="103"></button>
-		<button name="table-hdmi" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:10pt; background: transparent;" ><img src="table-hdmi.png"width="235" height="103"></button>
-		<button name="clickshare"class="btn btn-secondary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:0pt;" >HDMI<br>INPUT</button>
+		<button name="table-vga" style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:0pt;padding-right:10pt; background: transparent; border: none;" ><img src="table-vga.png" width="225" height="98"></button>
+		<button name="table-hdmi" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:10pt; background: transparent; border: none;" ><img src="table-hdmi.png"width="225" height="98"></button>
+		<button name="clickshare"class="btn btn-secondary" style="width:235; height: 103; font-size: 18pt; font-weight: 400;padding-left:10pt;padding-right:0pt; background: transparent; border: none;"><img src="clickshare.png" width="225" height="98"></button>
 	</td>
 </tr>
 </table>
