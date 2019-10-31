@@ -13,6 +13,7 @@ if(isset($_POST['sys-on']))
 // lower screen
 	system("gpio mode 28 out");
 	system("gpio write 28 0");
+	sleep(1);
 	system("gpio write 28 1");
 // set volume
 //power projector on
@@ -36,6 +37,7 @@ if(isset($_POST['sys-off']))
 // raise screen
 {	system("gpio mode 29 out");
 	system("gpio write 29 0");
+	sleep(1);
 	system("gpio write 29 1");
 //mute sound
 //power off projector
