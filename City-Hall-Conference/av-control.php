@@ -1,8 +1,11 @@
 <?php
-// COM Port for Projector is
-// COM Port for Switcher is
-// GPIO for Screen UP is
-// GPIO for Screen DOWN is
+// COM Port for Projector is /dev/ttyUSB0
+// COM Port for Switcher is /dev/ttyUSB1
+// GPIO for Screen UP is 28
+// GPIO for Screen DOWN is 29
+// Initial Volume Should be 50
+
+$volvar = 0
 
 include "PhpSerial.php";
 	error_reporting(E_ALL);
@@ -16,6 +19,18 @@ if(isset($_POST['sys-on']))
 	sleep(1);
 	system("gpio write 29 1");
 // set volume
+  $volvar = 50
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "SET VOLGAIN_DATA audioout $volvar\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+
 //power projector on
 	$serial = new PhpSerial;
 	$serial->deviceSet("/dev/ttyUSB0");
@@ -26,8 +41,7 @@ if(isset($_POST['sys-on']))
 	$serial->deviceOpen();
 	$cmd = "PWR ON\r";
 	$serial->sendMessage($cmd);
-	$cmd = "SOURCE 30\r";
-	//$cmd = pack("H*",$cmd);
+	$cmd = "SOURCE 80\r";
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 }
@@ -53,5 +67,79 @@ if(isset($_POST['sys-off']))
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 }
-
+// Table VGA Button
+if(isset($POST['source-table-vga']))
+{
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "SET SW vga\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+}
+// Table HDMI Button
+if(isset($POST['source-table-hdmi']))
+{
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "SET SW HDMI2\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+}
+// Clickshare Button
+if(isset($POST['source-clickshare']))
+{
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	//$cmd = "SET SW dp\r";
+	$cmd = "SET SW HDMI2\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+}
+// DVD/Blu-Ray Button
+if(isset($POST['source-dvd-bluray']))
+{
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "SET SW HDMI1\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+}
+if(isset($POST['vol-dn']))
+{
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "GET SW_STATUS\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
+	$read = "";
+	$read_length = $serial->readPort($read);
+	if ($read_length !== false && $read_length > 0) {
+    print "received: {$read}\n";
+	}
+}
 ?>
