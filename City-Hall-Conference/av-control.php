@@ -5,7 +5,7 @@
 // GPIO for Screen DOWN is 29
 // Initial Volume Should be 50
 
-$volvar = 0
+$volvar = 0;
 
 include "PhpSerial.php";
 	error_reporting(E_ALL);
@@ -19,7 +19,7 @@ if(isset($_POST['sys-on']))
 	sleep(1);
 	system("gpio write 29 1");
 // set volume
-  $volvar = 50
+  $volvar = 50;
 	$serial = new PhpSerial;
 	$serial->deviceSet("/dev/ttyUSB1");
 	$serial->confBaudRate(57600);
