@@ -126,19 +126,7 @@ if(isset($POST['source-dvd-bluray']))
 }
 if(isset($POST['vol-dn']))
 {
-	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB1");
-	$serial->confBaudRate(57600);
-	$serial->confParity("none");
-	$serial->confCharacterLength(8);
-	$serial->confStopBits(1);
-	$serial->deviceOpen();
-	$cmd = "SET MUTE audioout off\r";
-	$serial->sendMessage($cmd);
-	$read = $serial->readPort();
-	// Print out the data
-	echo $read;
-	$serial->deviceClose();
+
 	}
 }
 ?>
