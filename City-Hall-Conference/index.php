@@ -1,4 +1,6 @@
-<?php include_once("av-control.php") ?>
+<?php include_once("av-control.php");
+$read = "";
+?>
 <html>
 <head>
 <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -9,7 +11,7 @@
 <body style="background-image:url(tree.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;">
 <form method="post">
 		<div style="text-align: center; font-family: 'Patua One', cursive;font-size:36pt;color:#fff;margin-bottom:25px">
-			City Hall Conference Room AV Control
+			City Hall Conference Room AV Control<?php echo $read ?>
 			</div>
 <table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', sans-serif;">
 <tr>

@@ -133,13 +133,12 @@ if(isset($POST['vol-dn']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "GET SW_STATUS\r";
+	$cmd = "SET MUTE audioout off\r";
 	$serial->sendMessage($cmd);
+	$read = $serial->readPort();
+	// Print out the data
+	echo $read;
 	$serial->deviceClose();
-	$read = "";
-	$read_length = $serial->readPort($read);
-	if ($read_length !== false && $read_length > 0) {
-    print "received: {$read}\n";
 	}
 }
 ?>
