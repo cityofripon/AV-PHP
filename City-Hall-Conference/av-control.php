@@ -91,7 +91,7 @@ if(isset($POST['source-table-hdmi']))
 	$serial->confCharacterLength(8);
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
-	$cmd = "SET SW HDMI2\r";
+	$cmd = "SET SW HDMI2\r\n";
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 }
@@ -106,7 +106,7 @@ if(isset($POST['source-clickshare']))
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
 	//$cmd = "SET SW dp\r";
-	$cmd = "SET SW HDMI1\r";
+	$cmd = "SET SW HDMI1\r\n";
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 }
