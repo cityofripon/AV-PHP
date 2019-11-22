@@ -16,7 +16,7 @@ $read = "";
 <table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', sans-serif;">
 <tr>
 		<td>
-				<button name="vol-max"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; padding-bottom: 5pt;" >Volume Max</button>
+				<button name="vol-max"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; padding-bottom: 25pt;" >Volume Max</button>
 <br>
 				<button name="vol-5"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; padding-bottom: 5pt;" >5</button>
 <br>
