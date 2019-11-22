@@ -5,11 +5,27 @@
 // GPIO for Screen DOWN is 29
 // Initial Volume Should be 50
 
-$volvar = 0;
+// Create Serial Ojbect for Switcher
+$swserial = new PhpSerial;
+$swserial->deviceSet("/dev/ttyUSB1");
+$swserial->confBaudRate(57600);
+$swserial->confParity("none");
+$swserial->confCharacterLength(8);
+$swserial->confStopBits(1);
+
+// Create Serial Object for projector
+$pjserial = new PhpSerial;
+$pjserial->deviceSet("/dev/ttyUSB0");
+$pjserial->confBaudRate(9600);
+$pjserial->confParity("none");
+$pjserial->confCharacterLength(8);
+$pjserial->confStopBits(1);
+$pjserial->deviceOpen();
 
 include "PhpSerial.php";
 	error_reporting(E_ALL);
 ini_set('display_errors', '1');
+
 //System ON Button
 if(isset($_POST['sys-on']))
 {
@@ -19,40 +35,28 @@ if(isset($_POST['sys-on']))
 	sleep(1);
 	system("gpio write 29 1");
 // set volume
-$serial = new PhpSerial;
-$serial->deviceSet("/dev/ttyUSB1");
-$serial->confBaudRate(57600);
-$serial->confParity("none");
-$serial->confCharacterLength(8);
-$serial->confStopBits(1);
-$serial->deviceOpen();
-$cmd = "SET VOLGAIN_DATA audioout 50\r";
-$serial->sendMessage($cmd);
-$serial->deviceClose();
-
+	$swserial->deviceOpen();
+	$cmd = "SET VOLGAIN_DATA audioout 50\r";
+	$swserial->sendMessage($cmd);
+	$swserial->deviceClose();
 //power projector on
-	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB0");
-	$serial->confBaudRate(9600);
-	$serial->confParity("none");
-	$serial->confCharacterLength(8);
-	$serial->confStopBits(1);
-	$serial->deviceOpen();
+	$pjserial->deviceOpen();
 	$cmd = "PWR ON\r";
-	$serial->sendMessage($cmd);
+	$pjserial->sendMessage($cmd);
 	$cmd = "SOURCE 80\r";
-	$serial->sendMessage($cmd);
-	$serial->deviceClose();
+	$pjserial->sendMessage($cmd);
+	$pjserial->deviceClose();
 }
-//System OFF Button
 
+//System OFF Button
 if(isset($_POST['sys-off']))
 // raise screen
-{	system("gpio mode 28 out");
+{
+	system("gpio mode 28 out");
 	system("gpio write 28 0");
 	sleep(1);
 	system("gpio write 28 1");
-//mute sound
+
 //power off projector
 	$serial = new PhpSerial;
 	$serial->deviceSet("/dev/ttyUSB0");
@@ -62,7 +66,8 @@ if(isset($_POST['sys-off']))
 	$serial->confStopBits(1);
 	$serial->deviceOpen();
 	$cmd = "PWR OFF\r";
-//	$cmd = pack("H*",$cmd);
+
+// Mute Sound
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 	$serial = new PhpSerial;
@@ -76,6 +81,7 @@ if(isset($_POST['sys-off']))
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
 }
+
 // Table VGA Button
 if(isset($POST['source-table-vga']))
 {
