@@ -269,6 +269,7 @@ if(isset($POST['vol-100']))
 		$cmd = "SET VOLGAIN_DATA audioout 10\r";
 		$serial->sendMessage($cmd);
 		$serial->deviceClose();
+		echo "Volume 10";
 }
 		if(isset($POST['vol-0']))
 		{
