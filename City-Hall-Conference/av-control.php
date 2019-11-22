@@ -5,6 +5,10 @@
 // GPIO for Screen DOWN is 29
 // Initial Volume Should be 50
 
+include "PhpSerial.php";
+	error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 // Create Serial Ojbect for Switcher
 $swserial = new PhpSerial;
 $swserial->deviceSet("/dev/ttyUSB1");
@@ -22,9 +26,7 @@ $pjserial->confCharacterLength(8);
 $pjserial->confStopBits(1);
 $pjserial->deviceOpen();
 
-include "PhpSerial.php";
-	error_reporting(E_ALL);
-ini_set('display_errors', '1');
+
 
 //System ON Button
 if(isset($_POST['sys-on']))
