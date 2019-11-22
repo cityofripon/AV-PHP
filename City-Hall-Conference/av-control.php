@@ -82,7 +82,7 @@ if(isset($_POST['source-table-vga']))
 if(isset($_POST['source-table-hdmi']))
 {
 	$swserial->deviceOpen();
-	$cmd = "SET SW HDMI2\r\n";
+	$cmd = "SET SW dp\r\n";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
@@ -99,7 +99,7 @@ if(isset($_POST['source-clickshare']))
 if(isset($_POST['source-dvd-bluray']))
 {
 $swserial->deviceOpen();
-$cmd = "SET SW HDMI1\r";
+$cmd = "SET SW HDMI2\r";
 $swserial->sendMessage($cmd);
 $swserial->deviceClose();
 }

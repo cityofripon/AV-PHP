@@ -50,7 +50,7 @@ $read = "";
 	</td>
 	<td style="text-align:center;">
 		<button name="source-table-vga" style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:0pt;padding-right:5pt; background: transparent; border: none;"><img src="table-vga.png" width="225" height="98"></button>
-		<button name="source-table-hdmi"style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:5pt;padding-right:5pt;background: transparent; border: none;"><img src="table-hdmi.png"width="225" height="98"></button>
+		<button name="source-dvd-bluray"style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:5pt;padding-right:5pt;background: transparent; border: none;"><img src="dvd-bluray.png"width="225" height="98"></button>
 		<button name="source-clickshare"style="width:235; height: 103; font-size: 18pt; font-weight:400;padding-left:5pt;padding-right:0pt; background: transparent; border: none;"><img src="clickshare.png"width="225" height="98"></button>
 	</td>
 </tr>
