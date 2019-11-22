@@ -66,6 +66,16 @@ if(isset($_POST['sys-off']))
 //	$cmd = pack("H*",$cmd);
 	$serial->sendMessage($cmd);
 	$serial->deviceClose();
+	$serial = new PhpSerial;
+	$serial->deviceSet("/dev/ttyUSB1");
+	$serial->confBaudRate(57600);
+	$serial->confParity("none");
+	$serial->confCharacterLength(8);
+	$serial->confStopBits(1);
+	$serial->deviceOpen();
+	$cmd = "SET VOLGAIN_DATA audioout 0\r";
+	$serial->sendMessage($cmd);
+	$serial->deviceClose();
 }
 // Table VGA Button
 if(isset($POST['source-table-vga']))
