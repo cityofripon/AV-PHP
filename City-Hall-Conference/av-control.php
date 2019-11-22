@@ -259,7 +259,17 @@ if(isset($POST['vol-100']))
 	}
 	if(isset($POST['vol-10']))
 	{
-		echo "Volume 10";
+		$serial = new PhpSerial;
+		$serial->deviceSet("/dev/ttyUSB0");
+		$serial->confBaudRate(9600);
+		$serial->confParity("none");
+		$serial->confCharacterLength(8);
+		$serial->confStopBits(1);
+		$serial->deviceOpen();
+		$cmd = "MUTE ON\r";
+	//	$cmd = pack("H*",$cmd);
+		$serial->sendMessage($cmd);
+		$serial->deviceClose();
 }
 		if(isset($POST['vol-0']))
 		{
