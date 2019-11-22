@@ -259,16 +259,6 @@ if(isset($POST['vol-100']))
 	}
 	if(isset($POST['vol-10']))
 	{
-		$serial = new PhpSerial;
-		$serial->deviceSet("/dev/ttyUSB1");
-		$serial->confBaudRate(57600);
-		$serial->confParity("none");
-		$serial->confCharacterLength(8);
-		$serial->confStopBits(1);
-		$serial->deviceOpen();
-		$cmd = "SET VOLGAIN_DATA audioout 10\r";
-		$serial->sendMessage($cmd);
-		$serial->deviceClose();
 		echo "Volume 10";
 }
 		if(isset($POST['vol-0']))
