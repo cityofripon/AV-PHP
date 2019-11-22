@@ -17,15 +17,25 @@ $read = "";
 <tr>
 		<td>
 				<button name="vol-100"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 100%</button>
+<br>
 				<button name="vol-90"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 90%</button>
+<br>
 				<button name="vol-80"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 80%</button>
+				<br>
 				<button name="vol-70"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 70%</button>
+				<br>
 				<button name="vol-60"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 60%</button>
+				<br>
 				<button name="vol-50"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 50%</button>
+				<br>
 				<button name="vol-40"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 40%</button>
+				<br>
 				<button name="vol-30"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 30%</button>
+				<br>
 				<button name="vol-20"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 20%</button>
+				<br>
 				<button name="vol-10"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 10%</button>
+				<br>
 				<button name="vol-0"class="btn btn-primary" style="width:235; height: 16; font-size: 12pt; font-weight:400;" >Volume 0%</button>
 		</td>
 		<td>
