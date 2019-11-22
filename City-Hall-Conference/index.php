@@ -16,11 +16,17 @@ $read = "";
 <table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', sans-serif;">
 <tr>
 		<td>
-			<button name="vol-dn"class="btn btn-primary" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume<br>Up</button>
-			<br><br>
-			<button name="vol-up"class="btn btn-primary" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume Down</button>
-			<br><br>
-			<button name="vol-dn"class="btn btn-dark" style="width:235; height: 125; font-size: 32pt; font-weight:400;" >Volume Mute</button>
+				<button name="vol-100"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 100%</button>
+				<button name="vol-90"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 90%</button>
+				<button name="vol-80"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 80%</button>
+				<button name="vol-70"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 70%</button>
+				<button name="vol-60"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 60%</button>
+				<button name="vol-50"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 50%</button>
+				<button name="vol-40"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 40%</button>
+				<button name="vol-30"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 30%</button>
+				<button name="vol-20"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 20%</button>
+				<button name="vol-10"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 10%</button>
+				<button name="vol-0"class="btn btn-primary" style="width:235; height: 30; font-size: 32pt; font-weight:400;" >Volume 0%</button>
 		</td>
 		<td>
 		</td>
