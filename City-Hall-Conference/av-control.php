@@ -71,7 +71,7 @@ if(isset($_POST['sys-off']))
 }
 
 // Table VGA Button
-if(isset($POST['source-table-vga']))
+if(isset($_POST['source-table-vga']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET SW vga\r";
@@ -79,7 +79,7 @@ if(isset($POST['source-table-vga']))
 	$swserial->deviceClose();
 }
 // Table HDMI Button
-if(isset($POST['source-table-hdmi']))
+if(isset($_POST['source-table-hdmi']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET SW HDMI2\r\n";
@@ -87,7 +87,7 @@ if(isset($POST['source-table-hdmi']))
 	$swserial->deviceClose();
 }
 // Clickshare Button
-if(isset($POST['source-clickshare']))
+if(isset($_POST['source-clickshare']))
 {
 	$swserial->deviceOpen();
 	//$cmd = "SET SW dp\r";
@@ -96,7 +96,7 @@ if(isset($POST['source-clickshare']))
 	$swserial->deviceClose();
 }
 // DVD/Blu-Ray Button
-if(isset($POST['source-dvd-bluray']))
+if(isset($_POST['source-dvd-bluray']))
 {
 $swserial->deviceOpen();
 $cmd = "SET SW HDMI1\r";
@@ -104,77 +104,49 @@ $swserial->sendMessage($cmd);
 $swserial->deviceClose();
 }
 //Volume Settings
-if(isset($POST['vol-100']))
-{
-	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 100\r";
-	$swserial->sendMessage($cmd);
-	$swserial->deviceClose();
-}
-if(isset($POST['vol-90']))
+if(isset($_POST['vol-max']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET VOLGAIN_DATA audioout 90\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-80']))
+if(isset($_POST['vol-5']))
 {
 	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 80\r";
+	$cmd = "SET VOLGAIN_DATA audioout 75\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-70']))
-{
-	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 70\r";
-	$swserial->sendMessage($cmd);
-	$swserial->deviceClose();
-}
-if(isset($POST['vol-60']))
+if(isset($_POST['vol-4']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET VOLGAIN_DATA audioout 60\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-50']))
+if(isset($_POST['vol-3']))
 {
 	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 50\r";
+	$cmd = "SET VOLGAIN_DATA audioout 45\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-40']))
-{
-	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 40\r";
-	$swserial->sendMessage($cmd);
-	$swserial->deviceClose();
-}
-if(isset($POST['vol-30']))
+if(isset($_POST['vol-2']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET VOLGAIN_DATA audioout 30\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-20']))
+if(isset($_POST['vol-1']))
 {
 	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 20\r";
+	$cmd = "SET VOLGAIN_DATA audioout 15\r";
 	$swserial->sendMessage($cmd);
 	$swserial->deviceClose();
 }
-if(isset($POST['vol-10']))
-{
-	$swserial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout 10\r";
-	$swserial->sendMessage($cmd);
-	$swserial->deviceClose();
-}
-if(isset($POST['vol-0']))
+if(isset($_POST['vol-mute']))
 {
 	$swserial->deviceOpen();
 	$cmd = "SET VOLGAIN_DATA audioout 00\r";
