@@ -19,17 +19,16 @@ if(isset($_POST['sys-on']))
 	sleep(1);
 	system("gpio write 29 1");
 // set volume
-  $volvar = 50;
-	$serial = new PhpSerial;
-	$serial->deviceSet("/dev/ttyUSB1");
-	$serial->confBaudRate(57600);
-	$serial->confParity("none");
-	$serial->confCharacterLength(8);
-	$serial->confStopBits(1);
-	$serial->deviceOpen();
-	$cmd = "SET VOLGAIN_DATA audioout $volvar\r";
-	$serial->sendMessage($cmd);
-	$serial->deviceClose();
+$serial = new PhpSerial;
+$serial->deviceSet("/dev/ttyUSB1");
+$serial->confBaudRate(57600);
+$serial->confParity("none");
+$serial->confCharacterLength(8);
+$serial->confStopBits(1);
+$serial->deviceOpen();
+$cmd = "SET VOLGAIN_DATA audioout 50\r";
+$serial->sendMessage($cmd);
+$serial->deviceClose();
 
 //power projector on
 	$serial = new PhpSerial;
