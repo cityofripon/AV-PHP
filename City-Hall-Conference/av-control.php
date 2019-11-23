@@ -7,7 +7,7 @@
 
 include "PhpSerial.php";
 	error_reporting(E_ALL);
-ini_set('display_errors', '1');
+//ini_set('display_errors', '1');
 
 // Create Serial Ojbect for Switcher
 $swserial = new PhpSerial;
