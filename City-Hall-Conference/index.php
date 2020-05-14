@@ -25,17 +25,17 @@ $read = "";
 <table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', 'Ubuntu', sans-serif;">
 <tr>
 		<td>
-				<button name="vol-max"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt;" >Volume Max</button>
+				<button name="vol-max"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >Volume Max</button>
 <br>
-				<button name="vol-5"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 3pt;" >5</button>
+				<button name="vol-5"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >5</button>
 <br>
-				<button name="vol-4"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 2pt;" >4</button>
+				<button name="vol-4"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >4</button>
 <br>
-				<button name="vol-3"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 2pt;" >3</button>
+				<button name="vol-3"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >3</button>
 <br>
-				<button name="vol-2"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 2pt;" >2</button>
+				<button name="vol-2"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >2</button>
 <br>
-				<button name="vol-1"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 2pt;" >1</button>
+				<button name="vol-1"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt; vertical-align: middle;" >1</button>
 <br>
 				<button name="vol-mute"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400;" >Volume Mute</button>
 		</td>
