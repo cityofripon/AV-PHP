@@ -6,7 +6,16 @@ $read = "";
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <meta http-equiv="refresh" content="60">
 <title>A/V Control</title>
-<link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto|Roboto+Condensed|Roboto+Slab&display=swap" rel="stylesheet">
+<style>
+@font-face {
+    font-family: 'Patua One';
+    src: url('/fonts/PatuaOne-Regular.ttf');
+}
+@font-face {
+		font-family: 'Roboto';
+		src: url('/fonts/Roboto-Regular.ttf');
+}
+</style>
 </head>
 <body style="background-image:url(tree.jpg);background-position:center;background-repeat:no-repeat;background-size:cover;">
 <form method="post">
