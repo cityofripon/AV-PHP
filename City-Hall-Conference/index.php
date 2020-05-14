@@ -22,7 +22,7 @@ $read = "";
 		<div style="text-align: center; font-family: 'Patua One', cursive;font-size:36pt;color:#fff;margin-bottom:25px">
 			City Hall Conference Room AV Control<?php echo $read ?>
 			</div>
-<table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', sans-serif;">
+<table style="width:98%;background-image:url(logo.png);background-repeat:no-repeat;background-position:center;z-index:5;margin-left:1%;margin-right:1%font-family: 'Roboto', 'Ubuntu', sans-serif;">
 <tr>
 		<td>
 				<button name="vol-max"class="btn btn-primary" style="width:235; height: 45; font-size: 24pt; font-weight:400; margin-bottom: 5pt;" >Volume Max</button>
